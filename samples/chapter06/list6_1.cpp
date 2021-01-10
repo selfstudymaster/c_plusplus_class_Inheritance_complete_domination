@@ -1,14 +1,14 @@
 #include <iostream>
 using namespace std;
 
-// Šî–{ƒNƒ‰ƒX‚Ì’è‹`
+// åŸºæœ¬ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class MyClass {
 public:
   void func1(int a);
   virtual void func2(const char *s);
 };
 
-// Šî–{ƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// åŸºæœ¬ã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void MyClass::func1(int a) {
   cout << a << "\n";
 }
@@ -17,28 +17,28 @@ void MyClass::func2(const char *s) {
   cout << s << "\n";
 }
 
-// ”h¶ƒNƒ‰ƒX‚Ì’è‹`
+// æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class NewClass : public MyClass {
 public:
   void func2(const char *s);
 };
 
-// ”h¶ƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void NewClass::func2(const char *s) {
-  cout << "•¶š—ñƒf[ƒ^F";
+  cout << "æ–‡å­—åˆ—ãƒ‡ãƒ¼ã‚¿ï¼š";
   cout << s << "\n";
 }
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ”h¶ƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ğg‚¤
+  // æ´¾ç”Ÿã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½¿ã†
   NewClass obj;
 
-  // Œp³‚µ‚½ƒƒ“ƒoŠÖ”‚ğŒÄ‚Ño‚·
+  // ç¶™æ‰¿ã—ãŸãƒ¡ãƒ³ãƒé–¢æ•°ã‚’å‘¼ã³å‡ºã™
   obj.func1(123);
 
-  // ƒI[ƒo[ƒ‰ƒCƒh‚µ‚½ƒƒ“ƒoŠÖ”‚ğŒÄ‚Ño‚·
-  obj.func2("‹Zp•]˜_Ğ");
+  // ã‚ªãƒ¼ãƒãƒ¼ãƒ©ã‚¤ãƒ‰ã—ãŸãƒ¡ãƒ³ãƒé–¢æ•°ã‚’å‘¼ã³å‡ºã™
+  obj.func2("æŠ€è¡“è©•è«–ç¤¾");
 
   return 0;
 }

@@ -3,71 +3,71 @@
 #include "Company.h"
 using namespace std;
 
-// EmployeeƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// Employeeã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Employee::showData() {
-  cout << "Ğˆõ”Ô†F" << number << "\n";
-  cout << "–¼F" << name << "\n";
-  cout << "‹‹—^F" << salary << "\n";
+  cout << "ç¤¾å“¡ç•ªå·ï¼š" << number << "\n";
+  cout << "æ°åï¼š" << name << "\n";
+  cout << "çµ¦ä¸ï¼š" << salary << "\n";
 }
 
-// EmployeeƒNƒ‰ƒX‚Ìˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Employeeã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Employee::Employee() {
   number = 0;
-  strcpy(name, "–¢İ’è");
+  strcpy(name, "æœªè¨­å®š");
   salary = 150000;
 }
 
-// EmployeeƒNƒ‰ƒX‚Ìˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Employeeã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Employee::Employee(int nu, const char *na, int sa) {
   number = nu;
   strcpy(name, na);
   salary = sa;
 }
 
-// DirectorƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// Directorã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Director::showData() {
   Employee::showData();
-  cout << "Š”®•Û—L”F" << stock << "\n";
+  cout << "æ ªå¼ä¿æœ‰æ•°ï¼š" << stock << "\n";
 }
 
-// DirectorƒNƒ‰ƒX‚Ìˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Directorã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Director::Director() {
   stock = 100;
 }
 
-// DirectorƒNƒ‰ƒX‚Ìˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Directorã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Director::Director(int nu, const char *na, int sa, int st) : Employee(nu, na, sa) {
   stock = st;
 }
 
-// ManagerƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// Managerã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Manager::showData() {
   Employee::showData();
-  cout << "o’£”ïF" << travelAllowance << "\n";
+  cout << "å‡ºå¼µè²»ï¼š" << travelAllowance << "\n";
 }
 
-// ManagerƒNƒ‰ƒX‚Ìˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Managerã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Manager::Manager() {
   travelAllowance = 10000;
 }
 
-// ManagerƒNƒ‰ƒX‚Ìˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Managerã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Manager::Manager(int nu, const char *na, int sa, int tr) : Employee(nu, na, sa) {
   travelAllowance = tr;
 }
 
-// SalesmanƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// Salesmanã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Salesman::showData() {
   Employee::showData();
-  cout << "”„ãF" << sales << "\n";
+  cout << "å£²ä¸Šï¼š" << sales << "\n";
 }
 
-// SalesmanƒNƒ‰ƒX‚Ìˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Salesmanã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Salesman::Salesman() {
   sales = 0;
 }
 
-// SalesmanƒNƒ‰ƒX‚Ìˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Salesmanã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Salesman::Salesman(int nu, const char *na, int sa, int ss) : Employee(nu, na, sa) {
   sales = ss;
 }

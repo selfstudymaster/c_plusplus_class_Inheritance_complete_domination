@@ -1,37 +1,37 @@
-// EmployeeƒNƒ‰ƒX‚Ì’è‹`
+// Employeeã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Employee {
 public:
-  int number;			// Ğˆõ”Ô†
-  char name[80];		// –¼
-  int salary;			// ‹‹—^
-  virtual void showData();	// ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
-  Employee();			// ˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  Employee(int nu, const char *na, int sa); // ˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  int number;			// ç¤¾å“¡ç•ªå·
+  char name[80];		// æ°å
+  int salary;			// çµ¦ä¸
+  virtual void showData();	// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
+  Employee();			// å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  Employee(int nu, const char *na, int sa); // å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// DirectorƒNƒ‰ƒX‚Ì’è‹`
+// Directorã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Director : public Employee {
 public:
-  int stock;			// Š”®•Û—L”
-  void showData();		// ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
-  Director();			// ˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  Director(int nu, const char *na, int sa, int st); // ˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  int stock;			// æ ªå¼ä¿æœ‰æ•°
+  void showData();		// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
+  Director();			// å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  Director(int nu, const char *na, int sa, int st); // å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ManagerƒNƒ‰ƒX‚Ì’è‹`
+// Managerã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Manager : public Employee {
 public:
-  int travelAllowance;		// o’£”ï
-  void showData();		// ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
-  Manager();			// ˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  Manager(int nu, const char *na, int sa, int tr); // ˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  int travelAllowance;		// å‡ºå¼µè²»
+  void showData();		// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
+  Manager();			// å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  Manager(int nu, const char *na, int sa, int tr); // å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// SalesmanƒNƒ‰ƒX‚Ì’è‹`
+// Salesmanã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Salesman : public Employee {
 public:
-  int sales;			// ”„ã
-  void showData();		// ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
-  Salesman();			// ˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  Salesman(int nu, const char *na, int sa, int ss); // ˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  int sales;			// å£²ä¸Š
+  void showData();		// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
+  Salesman();			// å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  Salesman(int nu, const char *na, int sa, int ss); // å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
