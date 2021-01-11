@@ -1,3 +1,4 @@
+// p155 List 6-3
 // Employeeクラスの定義
 class Employee {
 public:
