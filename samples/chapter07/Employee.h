@@ -1,8 +1,8 @@
-// ƒNƒ‰ƒX‚Ì’è‹`
+// ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Employee {
 public:
-  const static char *companyName;	// ‰ïĞ–¼iÃ“Iƒƒ“ƒo•Ï”j
-  int number;			// Ğˆõ”Ô†
-  char name[80];		// –¼
-  int salary;			// ‹‹—^
+  const static char *companyName;	// ä¼šç¤¾åï¼ˆé™çš„ãƒ¡ãƒ³ãƒå¤‰æ•°ï¼‰
+  int number;			// ç¤¾å“¡ç•ªå·
+  char name[80];		// æ°å
+  int salary;			// çµ¦ä¸
 };

@@ -1,4 +1,4 @@
 #include "Employee.h"
 
-// 静的メンバ変数の実体となるグローバル変数
-const char *Employee::companyName = "技術評論社";
+// 髱咏噪繝｡繝ｳ繝仙､画焚縺ｮ螳滉ｽ薙→縺ｪ繧九げ繝ｭ繝ｼ繝舌Ν螟画焚
+const char *Employee::companyName = "謚陦楢ｩ戊ｫ也､ｾ";

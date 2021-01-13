@@ -2,15 +2,15 @@
 #include "Employee.h"
 using namespace std;
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒNƒ‰ƒX–¼‚ÅÃ“Iƒƒ“ƒo•Ï”‚ğg‚¤
+  // ã‚¯ãƒ©ã‚¹åã§é™çš„ãƒ¡ãƒ³ãƒå¤‰æ•°ã‚’ä½¿ã†
   cout << Employee::companyName << "\n";
 
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Employee tanaka;
 
-  // ƒIƒuƒWƒFƒNƒg–¼‚ÅÃ“Iƒƒ“ƒo•Ï”‚ğg‚¤
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆåã§é™çš„ãƒ¡ãƒ³ãƒå¤‰æ•°ã‚’ä½¿ã†
   cout << tanaka.companyName << "\n";
 
   return 0;
