@@ -1,61 +1,61 @@
 #include <iostream>
 using namespace std;
 
-// ‘O•ûQÆi‚±‚Ì•”•ª‚ğƒRƒƒ“ƒgƒAƒEƒg‚·‚éj
+// å‰æ–¹å‚ç…§ï¼ˆã“ã®éƒ¨åˆ†ã‚’ã‚³ãƒ¡ãƒ³ãƒˆã‚¢ã‚¦ãƒˆã™ã‚‹ï¼‰
 class YourClass;
 
-// MyClassƒNƒ‰ƒX‚Ì’è‹`
+// MyClassã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class MyClass {
 private:
   int val;
-  friend void compObj(MyClass *m, YourClass *y); // ƒtƒŒƒ“ƒhŠÖ”
+  friend void compObj(MyClass *m, YourClass *y); // ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°
 public:
-  // ˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  // å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
   MyClass() {
     val = 0;
   }
-  // ˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  // å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
   MyClass(int v) {
     val = v;
   }
 };
 
-// YourClassƒNƒ‰ƒX‚Ì’è‹`
+// YourClassã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class YourClass {
 private:
   int num;
-  friend void compObj(MyClass *m, YourClass *y); // ƒtƒŒƒ“ƒhŠÖ”
+  friend void compObj(MyClass *m, YourClass *y); // ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°
 public:
-  // ˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  // å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
   YourClass() {
     num = 0;
   }
-  // ˆø”‚ğ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  // å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
   YourClass(int n) {
     num = n;
   }
 };
 
-// ƒtƒŒƒ“ƒhŠÖ”‚ÌÀ‘Ì‚Ì’è‹`
+// ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°ã®å®Ÿä½“ã®å®šç¾©
 void compObj(MyClass *m, YourClass *y) {
   if (m->val > y->num) {
-    cout << "val‚Ínum‚æ‚è‘å‚«‚¢I\n";
+    cout << "valã¯numã‚ˆã‚Šå¤§ãã„ï¼\n";
   }
   else if (m->val < y->num) {
-    cout << "val‚Ínum‚æ‚è¬‚³‚¢I\n";
+    cout << "valã¯numã‚ˆã‚Šå°ã•ã„ï¼\n";
   }
   else {
-    cout << "val‚Ænum‚Í“™‚µ‚¢I\n";
+    cout << "valã¨numã¯ç­‰ã—ã„ï¼\n";
   }
 }
 
-// ƒNƒ‰ƒX‚ÆŠÖ”‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã¨é–¢æ•°ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   MyClass mc(123);
   YourClass yc(456);
 
-  // ƒtƒŒƒ“ƒhŠÖ”‚ğg‚¤
+  // ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°ã‚’ä½¿ã†
   compObj(&mc, &yc);
 
   return 0;

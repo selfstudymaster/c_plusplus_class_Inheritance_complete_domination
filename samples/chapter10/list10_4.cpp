@@ -1,95 +1,95 @@
 #include <iostream>
 using namespace std;
 
-// ƒNƒ‰ƒX‚Ì’è‹`
+// ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Point {
 public:
-  int x;	// xÀ•W
-  int y;	// yÀ•W
+  int x;	// xåº§æ¨™
+  int y;	// yåº§æ¨™
 
-  // Point+Pointiƒƒ“ƒoŠÖ”j
+  // Point+Pointï¼ˆãƒ¡ãƒ³ãƒé–¢æ•°ï¼‰
   Point operator+(Point obj);
 
-  // Point+intiƒƒ“ƒoŠÖ”j
+  // Point+intï¼ˆãƒ¡ãƒ³ãƒé–¢æ•°ï¼‰
   Point operator+(int a);
 
-  // int+PointiƒtƒŒƒ“ƒhŠÖ”j
+  // int+Pointï¼ˆãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°ï¼‰
   friend Point operator+(int a, Point obj);
 };
 
-// Point+Pointiƒƒ“ƒoŠÖ”j‚ÌÀ‘•
+// Point+Pointï¼ˆãƒ¡ãƒ³ãƒé–¢æ•°ï¼‰ã®å®Ÿè£…
 Point Point::operator+(Point obj) {
-  // ‰‰ZŒ‹‰Ê‚Æ‚È‚éƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // æ¼”ç®—çµæœã¨ãªã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point ans;
 
-  // ƒƒ“ƒo‚Ç‚¤‚µ‚ğ‰ÁZ‚·‚é
+  // ãƒ¡ãƒ³ãƒã©ã†ã—ã‚’åŠ ç®—ã™ã‚‹
   ans.x = this->x + obj.x;
   ans.y = this->y + obj.y;
 
-  // ‰‰ZŒ‹‰Ê‚ğ•Ô‚·
+  // æ¼”ç®—çµæœã‚’è¿”ã™
   return ans;
 }
 
-// Point+intiƒƒ“ƒoŠÖ”j‚ÌÀ‘•
+// Point+intï¼ˆãƒ¡ãƒ³ãƒé–¢æ•°ï¼‰ã®å®Ÿè£…
 Point Point::operator+(int a) {
-  // ‰‰ZŒ‹‰Ê‚Æ‚È‚éƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // æ¼”ç®—çµæœã¨ãªã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point ans;
 
-  // x‚Æy‚É‰ÁZ‚·‚é
+  // xã¨yã«åŠ ç®—ã™ã‚‹
   ans.x = this->x + a;
   ans.y = this->y + a;
 
-  // ‰‰ZŒ‹‰Ê‚ğ•Ô‚·
+  // æ¼”ç®—çµæœã‚’è¿”ã™
   return ans;
 }
 
-// int+PointiƒtƒŒƒ“ƒhŠÖ”j‚ÌÀ‘Ì
+// int+Pointï¼ˆãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°ï¼‰ã®å®Ÿä½“
 Point operator+(int a, Point obj2) {
-  // ‰‰ZŒ‹‰Ê‚Æ‚È‚éƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // æ¼”ç®—çµæœã¨ãªã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point ans;
 
-  // x‚Æy‚É‰ÁZ‚·‚é
+  // xã¨yã«åŠ ç®—ã™ã‚‹
   ans.x = a + obj2.x;
   ans.y = a + obj2.y;
 
-  // ‰‰ZŒ‹‰Ê‚ğ•Ô‚·
+  // æ¼”ç®—çµæœã‚’è¿”ã™
   return ans;
 }
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point a, b, c;
 
-  // ƒƒ“ƒo•Ï”‚ğİ’è‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã‚’è¨­å®šã™ã‚‹
   a.x = 1;
   a.y = 2;
   b.x = 3;
   b.y = 4;
 
-  // Point‚ÆPoint‚ğ‰ÁZ‚·‚é
+  // Pointã¨Pointã‚’åŠ ç®—ã™ã‚‹
   c = a + b;
 
-  // ‰ÁZŒ‹‰Ê‚ğ•\¦‚·‚é
+  // åŠ ç®—çµæœã‚’è¡¨ç¤ºã™ã‚‹
   cout << "Point+Point\n";
-  cout << "xÀ•WF" << c.x << "\n";
-  cout << "yÀ•WF" << c.y << "\n";
+  cout << "xåº§æ¨™ï¼š" << c.x << "\n";
+  cout << "yåº§æ¨™ï¼š" << c.y << "\n";
 
-  // Point‚Æint‚ğ‰ÁZ‚·‚é
+  // Pointã¨intã‚’åŠ ç®—ã™ã‚‹
   c = a + 10;
 
-  // ‰ÁZŒ‹‰Ê‚ğ•\¦‚·‚é
+  // åŠ ç®—çµæœã‚’è¡¨ç¤ºã™ã‚‹
   cout << "Point+int\n";
-  cout << "xÀ•WF" << c.x << "\n";
-  cout << "yÀ•WF" << c.y << "\n";
+  cout << "xåº§æ¨™ï¼š" << c.x << "\n";
+  cout << "yåº§æ¨™ï¼š" << c.y << "\n";
 
-  // int‚ÆPoint‚ğ‰ÁZ‚·‚é
+  // intã¨Pointã‚’åŠ ç®—ã™ã‚‹
   c = 20 + a;
 
-  // ‰ÁZŒ‹‰Ê‚ğ•\¦‚·‚é
+  // åŠ ç®—çµæœã‚’è¡¨ç¤ºã™ã‚‹
   cout << "int+Point\n";
-  cout << "xÀ•WF" << c.x << "\n";
-  cout << "yÀ•WF" << c.y << "\n";
+  cout << "xåº§æ¨™ï¼š" << c.x << "\n";
+  cout << "yåº§æ¨™ï¼š" << c.y << "\n";
 
   return 0;
 }

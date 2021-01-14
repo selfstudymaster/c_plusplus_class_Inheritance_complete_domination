@@ -3,16 +3,16 @@
 #include <ctime>
 using namespace std;
 
-// Šî–{ƒNƒ‰ƒX‚Ì’è‹`
+// åŸºæœ¬ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Hand {
 public:
-  virtual void judge(Hand *h) = 0;	// ‘ŠŽè‚É–â‚¢‡‚í‚¹‚é
-  virtual void vsGu() = 0;	// ƒO[‚ÉŸ‚Ä‚é‚©‚Ç‚¤‚©‚ð•Ô‚·
-  virtual void vsChoki() = 0;	// ƒ`ƒ‡ƒL‚ÉŸ‚Ä‚é‚©‚Ç‚¤‚©‚ð•Ô‚·
-  virtual void vsPa() = 0;	// ƒp[‚ÉŸ‚Ä‚é‚©‚Ç‚¤‚©‚ð•Ô‚·
+  virtual void judge(Hand *h) = 0;	// ç›¸æ‰‹ã«å•ã„åˆã‚ã›ã‚‹
+  virtual void vsGu() = 0;	// ã‚°ãƒ¼ã«å‹ã¦ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™
+  virtual void vsChoki() = 0;	// ãƒãƒ§ã‚­ã«å‹ã¦ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™
+  virtual void vsPa() = 0;	// ãƒ‘ãƒ¼ã«å‹ã¦ã‚‹ã‹ã©ã†ã‹ã‚’è¿”ã™
 };
 
-// GuƒNƒ‰ƒX‚Ì’è‹`
+// Guã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Gu : public Hand {
 public:
   void judge(Hand *h);
@@ -21,24 +21,24 @@ public:
   void vsPa();
 };
 
-// GuƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌŽÀ‘•
+// Guã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Gu::judge(Hand *h) {
   h->vsGu();
 }
 
 void Gu::vsGu() {
-  cout << "‚ ‚¢‚±‚Å‚·I\n";
+  cout << "ã‚ã„ã“ã§ã™ï¼\n";
 }
 
 void Gu::vsChoki() {
-  cout << "ƒO[‚ÌŸ‚¿‚Å‚·I\n";
+  cout << "ã‚°ãƒ¼ã®å‹ã¡ã§ã™ï¼\n";
 }
 
 void Gu::vsPa() {
-  cout << "ƒO[‚Ì•‰‚¯‚Å‚·I\n";
+  cout << "ã‚°ãƒ¼ã®è² ã‘ã§ã™ï¼\n";
 }
 
-// ChokiƒNƒ‰ƒX‚Ì’è‹`
+// Chokiã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Choki : public Hand {
 public:
   void judge(Hand *h);
@@ -47,24 +47,24 @@ public:
   void vsPa();
 };
 
-// ChokiƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌŽÀ‘•
+// Chokiã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Choki::judge(Hand *h) {
   h->vsChoki();
 }
 
 void Choki::vsGu() {
-  cout << "ƒ`ƒ‡ƒL‚Ì•‰‚¯‚Å‚·I\n";
+  cout << "ãƒãƒ§ã‚­ã®è² ã‘ã§ã™ï¼\n";
 }
 
 void Choki::vsChoki() {
-  cout << "‚ ‚¢‚±‚Å‚·I\n";
+  cout << "ã‚ã„ã“ã§ã™ï¼\n";
 }
 
 void Choki::vsPa() {
-  cout << "ƒ`ƒ‡ƒL‚ÌŸ‚¿‚Å‚·I\n";
+  cout << "ãƒãƒ§ã‚­ã®å‹ã¡ã§ã™ï¼\n";
 }
 
-// PaƒNƒ‰ƒX‚Ì’è‹`
+// Paã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Pa : public Hand {
 public:
   void judge(Hand *h);
@@ -73,40 +73,40 @@ public:
   void vsPa();
 };
 
-// PaƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌŽÀ‘•
+// Paã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Pa::judge(Hand *h) {
   h->vsPa();
 }
 
 void Pa::vsGu() {
-  cout << "ƒp[‚ÌŸ‚¿‚Å‚·I\n";
+  cout << "ãƒ‘ãƒ¼ã®å‹ã¡ã§ã™ï¼\n";
 }
 
 void Pa::vsChoki() {
-  cout << "ƒp[‚Ì•‰‚¯‚Å‚·I\n";
+  cout << "ãƒ‘ãƒ¼ã®è² ã‘ã§ã™ï¼\n";
 }
 
 void Pa::vsPa() {
-  cout << "‚ ‚¢‚±‚Å‚·I\n";
+  cout << "ã‚ã„ã“ã§ã™ï¼\n";
 }
 
-// ƒNƒ‰ƒX‚ðŽg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ðì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Gu g;
   Choki c;
   Pa p;
 
-  // ƒO[‚Æƒ`ƒ‡ƒL‚ð‘Îí‚³‚¹‚é
-  cout << "ƒO[ vs. ƒ`ƒ‡ƒLc";
+  // ã‚°ãƒ¼ã¨ãƒãƒ§ã‚­ã‚’å¯¾æˆ¦ã•ã›ã‚‹
+  cout << "ã‚°ãƒ¼ vs. ãƒãƒ§ã‚­â€¦";
   c.judge(&g);
 
-  // ƒO[‚Æƒp[‚ð‘Îí‚³‚¹‚é
-  cout << "ƒO[ vs. ƒp[c";
+  // ã‚°ãƒ¼ã¨ãƒ‘ãƒ¼ã‚’å¯¾æˆ¦ã•ã›ã‚‹
+  cout << "ã‚°ãƒ¼ vs. ãƒ‘ãƒ¼â€¦";
   p.judge(&g);
 
-  // ƒO[‚ÆƒO[‚ð‘Îí‚³‚¹‚é
-  cout << "ƒO[ vs. ƒO[c";
+  // ã‚°ãƒ¼ã¨ã‚°ãƒ¼ã‚’å¯¾æˆ¦ã•ã›ã‚‹
+  cout << "ã‚°ãƒ¼ vs. ã‚°ãƒ¼â€¦";
   g.judge(&g);
 
   return 0;

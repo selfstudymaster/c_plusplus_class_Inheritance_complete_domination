@@ -1,65 +1,65 @@
 #include <iostream>
 using namespace std;
 
-// ƒNƒ‰ƒX‚Ì’è‹`
+// ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Point {
 public:
-  int x;		// xÀ•W
-  int y;		// yÀ•W
-  Point operator+(Point obj); // +‰‰ŽZŽq‚ÌƒI[ƒo[ƒ[ƒh
-  Point operator-(Point obj); // -‰‰ŽZŽq‚ÌƒI[ƒo[ƒ[ƒh
+  int x;		// xåº§æ¨™
+  int y;		// yåº§æ¨™
+  Point operator+(Point obj); // +æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰
+  Point operator-(Point obj); // -æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰
 };
 
-// +‰‰ŽZŽq‚ÌƒI[ƒo[ƒ[ƒh‚ÌŽÀ‘•
+// +æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã®å®Ÿè£…
 Point Point::operator+(Point obj) {
-  // ‰‰ŽZŒ‹‰Ê‚Æ‚È‚éƒIƒuƒWƒFƒNƒg‚ðì¬‚·‚é
+  // æ¼”ç®—çµæžœã¨ãªã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point ans;
 
-  // ƒƒ“ƒo‚Ç‚¤‚µ‚ð‰ÁŽZ‚·‚é
+  // ãƒ¡ãƒ³ãƒã©ã†ã—ã‚’åŠ ç®—ã™ã‚‹
   ans.x = this->x + obj.x;
   ans.y = this->y + obj.y;
 
-  // ‰‰ŽZŒ‹‰Ê‚ð•Ô‚·
+  // æ¼”ç®—çµæžœã‚’è¿”ã™
   return ans;
 }
 
-// -‰‰ŽZŽq‚ÌƒI[ƒo[ƒ[ƒh‚ÌŽÀ‘•
+// -æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã®å®Ÿè£…
 Point Point::operator-(Point obj) {
-  // ‰‰ŽZŒ‹‰Ê‚Æ‚È‚éƒIƒuƒWƒFƒNƒg‚ðì¬‚·‚é
+  // æ¼”ç®—çµæžœã¨ãªã‚‹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point ans;
 
-  // ƒƒ“ƒo‚Ç‚¤‚µ‚ðŒ¸ŽZ‚·‚é
+  // ãƒ¡ãƒ³ãƒã©ã†ã—ã‚’æ¸›ç®—ã™ã‚‹
   ans.x = this->x - obj.x;
   ans.y = this->y - obj.y;
 
-  // ‰‰ŽZŒ‹‰Ê‚ð•Ô‚·
+  // æ¼”ç®—çµæžœã‚’è¿”ã™
   return ans;
 }
 
-// ƒNƒ‰ƒX‚ðŽg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ðì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point a, b, c;
 
-  // ƒƒ“ƒo•Ï”‚ðÝ’è‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã‚’è¨­å®šã™ã‚‹
   a.x = 1;
   a.y = 2;
   b.x = 3;
   b.y = 4;
 
-  // ƒIƒuƒWƒFƒNƒg‚ð‰ÁŽZ‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’åŠ ç®—ã™ã‚‹
   c = a + b;
 
-  // ‰ÁŽZŒ‹‰Ê‚ð•\Ž¦‚·‚é
-  cout << "xÀ•WF" << c.x << "\n";
-  cout << "yÀ•WF" << c.y << "\n";
+  // åŠ ç®—çµæžœã‚’è¡¨ç¤ºã™ã‚‹
+  cout << "xåº§æ¨™ï¼š" << c.x << "\n";
+  cout << "yåº§æ¨™ï¼š" << c.y << "\n";
 
-  // ƒIƒuƒWƒFƒNƒg‚ðŒ¸ŽZ‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æ¸›ç®—ã™ã‚‹
   c = a - b;
 
-  // Œ¸ŽZŒ‹‰Ê‚ð•\Ž¦‚·‚é
-  cout << "xÀ•WF" << c.x << "\n";
-  cout << "yÀ•WF" << c.y << "\n";
+  // æ¸›ç®—çµæžœã‚’è¡¨ç¤ºã™ã‚‹
+  cout << "xåº§æ¨™ï¼š" << c.x << "\n";
+  cout << "yåº§æ¨™ï¼š" << c.y << "\n";
 
   return 0;
 }

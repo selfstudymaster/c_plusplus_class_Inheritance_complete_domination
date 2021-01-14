@@ -2,54 +2,54 @@
 #include <cstring>
 using namespace std;
 
-// ƒNƒ‰ƒX‚Ì’è‹`
+// ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Employee {
 public:
-  int number;		// Ğˆõ”Ô†
-  char name[80];	// –¼
-  int salary;		// ‹‹—^
-  Employee();		// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  ~Employee();		// ƒfƒXƒgƒ‰ƒNƒ^
+  int number;		// ç¤¾å“¡ç•ªå·
+  char name[80];	// æ°å
+  int salary;		// çµ¦ä¸
+  Employee();		// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  ~Employee();		// ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Employee::Employee() {
-  // ƒƒ“ƒo•Ï”‚ğƒfƒtƒHƒ‹ƒg’l‚Å‰Šú‰»‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã‚’ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã§åˆæœŸåŒ–ã™ã‚‹
   number = 0;
-  strcpy(name, "–¢İ’è");
+  strcpy(name, "æœªè¨­å®š");
   salary = 150000;
-  cout << "ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Ño‚³‚ê‚Ü‚µ‚½I\n";
+  cout << "ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã³å‡ºã•ã‚Œã¾ã—ãŸï¼\n";
 }
 
-// ƒfƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Employee::~Employee() {
-  cout << "ƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Ño‚³‚ê‚Ü‚µ‚½I\n";
+  cout << "ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã³å‡ºã•ã‚Œã¾ã—ãŸï¼\n";
 }
 
-// ŠÖ”‚Ìƒvƒƒgƒ^ƒCƒvéŒ¾
+// é–¢æ•°ã®ãƒ—ãƒ­ãƒˆã‚¿ã‚¤ãƒ—å®£è¨€
 void show(Employee obj);
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Employee tanaka;
 
-  // ƒƒ“ƒo•Ï”‚É’l‚ğİ’è‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã«å€¤ã‚’è¨­å®šã™ã‚‹
   tanaka.number = 1234;
-  strcpy(tanaka.name, "“c’†ˆê˜Y");
+  strcpy(tanaka.name, "ç”°ä¸­ä¸€éƒ");
   tanaka.salary = 200000;
 
-  // ƒIƒuƒWƒFƒNƒg‚ğˆø”‚É“n‚µ‚ÄŠÖ”‚ğŒÄ‚Ño‚·
-  cout << "show()‚ğŒÄ‚Ño‚µ‚Ü‚·I\n";
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¼•æ•°ã«æ¸¡ã—ã¦é–¢æ•°ã‚’å‘¼ã³å‡ºã™
+  cout << "show()ã‚’å‘¼ã³å‡ºã—ã¾ã™ï¼\n";
   show(tanaka);
-  cout << "show()‚ğ”²‚¯‚Ü‚µ‚½I\n";
+  cout << "show()ã‚’æŠœã‘ã¾ã—ãŸï¼\n";
 
   return 0;
 }
 
-// ƒIƒuƒWƒFƒNƒg‚ğˆø”‚Æ‚·‚éŠÖ”
+// ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’å¼•æ•°ã¨ã™ã‚‹é–¢æ•°
 void show(Employee obj) {
-  cout << "Ğˆõ”Ô†F" << obj.number << "\n";
-  cout << "–¼F" << obj.name << "\n";
-  cout << "‹‹—^F" << obj.salary << "\n";
+  cout << "ç¤¾å“¡ç•ªå·ï¼š" << obj.number << "\n";
+  cout << "æ°åï¼š" << obj.name << "\n";
+  cout << "çµ¦ä¸ï¼š" << obj.salary << "\n";
 }

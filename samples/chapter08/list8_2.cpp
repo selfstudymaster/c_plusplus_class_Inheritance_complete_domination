@@ -2,58 +2,58 @@
 #include <cstring>
 using namespace std;
 
-// CellPhoneƒNƒ‰ƒX‚Ì’è‹`
+// CellPhoneã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class CellPhone {
 public:
-  char number[20];	// “d˜b”Ô†
-  bool smart;		// ƒXƒ}ƒz‚©‚Ç‚¤‚©
+  char number[20];	// é›»è©±ç•ªå·
+  bool smart;		// ã‚¹ãƒãƒ›ã‹ã©ã†ã‹
 };
 
-// EmployeeƒNƒ‰ƒX‚Ì’è‹`
+// Employeeã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Employee {
 public:
-  int number;		// Ğˆõ”Ô†
-  char name[80];	// –¼
-  int salary;		// ‹‹—^
-  CellPhone phone;	// Œg‘Ñ“d˜biƒƒ“ƒoƒIƒuƒWƒFƒNƒgj
-  void showData();	// ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
+  int number;		// ç¤¾å“¡ç•ªå·
+  char name[80];	// æ°å
+  int salary;		// çµ¦ä¸
+  CellPhone phone;	// æºå¸¯é›»è©±ï¼ˆãƒ¡ãƒ³ãƒã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆï¼‰
+  void showData();	// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
 };
 
-// EmployeeƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// Employeeã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Employee::showData() {
-  cout << "Ğˆõ”Ô†F" << number << "\n";
-  cout << "–¼F" << name << "\n";
-  cout << "‹‹—^F" << salary << "\n";
-  cout << "Œg‘Ñ“d˜b”Ô†F" << phone.number << "\n";
-  cout << "ƒXƒ}ƒz‚©‚Ç‚¤‚©F" << phone.smart << "\n";
+  cout << "ç¤¾å“¡ç•ªå·ï¼š" << number << "\n";
+  cout << "æ°åï¼š" << name << "\n";
+  cout << "çµ¦ä¸ï¼š" << salary << "\n";
+  cout << "æºå¸¯é›»è©±ç•ªå·ï¼š" << phone.number << "\n";
+  cout << "ã‚¹ãƒãƒ›ã‹ã©ã†ã‹ï¼š" << phone.smart << "\n";
 }
 
-// ƒOƒ[ƒoƒ‹ƒIƒuƒWƒFƒNƒg
+// ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 Employee tanaka;
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒOƒ[ƒoƒ‹ƒIƒuƒWƒFƒNƒg‚ğg‚¤
+  // ã‚°ãƒ­ãƒ¼ãƒãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½¿ã†
   tanaka.number = 1234;
-  strcpy(tanaka.name, "“c’†ˆê˜Y");
+  strcpy(tanaka.name, "ç”°ä¸­ä¸€éƒ");
   tanaka.salary = 200000;
   strcpy(tanaka.phone.number, "111-1111-1111");
   tanaka.phone.smart = true;
   tanaka.showData();
 
-  // ƒ[ƒJƒ‹ƒIƒuƒWƒFƒNƒg‚ğg‚¤
+  // ãƒ­ãƒ¼ã‚«ãƒ«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½¿ã†
   Employee sato;
   sato.number = 1235;
-  strcpy(sato.name, "²“¡Ÿ˜Y");
+  strcpy(sato.name, "ä½è—¤æ¬¡éƒ");
   sato.salary = 250000;
   strcpy(sato.phone.number, "222-2222-2222");
   sato.phone.smart = true;
   sato.showData();
 
-  // “®“IƒIƒuƒWƒFƒNƒg‚ğg‚¤
+  // å‹•çš„ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½¿ã†
   Employee *suzuki = new Employee;
   suzuki->number = 1236;
-  strcpy(suzuki->name, "—é–ØO˜Y");
+  strcpy(suzuki->name, "éˆ´æœ¨ä¸‰éƒ");
   suzuki->salary = 300000;
   strcpy(suzuki->phone.number, "333-3333-3333");
   suzuki->phone.smart = false;

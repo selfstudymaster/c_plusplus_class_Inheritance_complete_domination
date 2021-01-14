@@ -1,50 +1,50 @@
 #include <iostream>
 using namespace std;
 
-// •½–ÊÀ•W‚Ì“_‚ðŽæ‚èˆµ‚¤ƒeƒ“ƒvƒŒ[ƒgƒNƒ‰ƒX‚Ì’è‹`
+// å¹³é¢åº§æ¨™ã®ç‚¹ã‚’å–ã‚Šæ‰±ã†ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹ã®å®šç¾©
 template <class datatype> class TPoint {
 public:
-  datatype x;		// xÀ•W
-  datatype y;		// yÀ•W
-  void showData();	// ƒƒ“ƒo•Ï”‚Ì’l‚ð•\Ž¦‚·‚é
-  TPoint();		// ˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  TPoint(datatype x, datatype y); // ˆø”‚ðŽ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  datatype x;		// xåº§æ¨™
+  datatype y;		// yåº§æ¨™
+  void showData();	// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
+  TPoint();		// å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  TPoint(datatype x, datatype y); // å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ƒeƒ“ƒvƒŒ[ƒgƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌŽÀ‘•
+// ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 template <class datatype> void TPoint<datatype>::showData() {
-  cout << "xÀ•WF" << x << "\n";
-  cout << "yÀ•WF" << y << "\n";
+  cout << "xåº§æ¨™ï¼š" << x << "\n";
+  cout << "yåº§æ¨™ï¼š" << y << "\n";
 }
 
-// ƒeƒ“ƒvƒŒ[ƒgƒNƒ‰ƒX‚Ìˆø”‚Ì‚È‚¢ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌŽÀ‘•
+// ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã®ãªã„ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 template <class datatype> TPoint<datatype>::TPoint() {
   x = 0;
   y = 0;
 }
 
-// ƒeƒ“ƒvƒŒ[ƒgƒNƒ‰ƒX‚Ìˆø”‚ðŽ‚ÂƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌŽÀ‘•
+// ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆã‚¯ãƒ©ã‚¹ã®å¼•æ•°ã‚’æŒã¤ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 template <class datatype> TPoint<datatype>::TPoint(datatype x, datatype y) {
   this->x = x;
   this->y = y;
 }
 
-// ƒNƒ‰ƒX‚ðŽg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // intŒ^—p‚ÌTPointƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ðì¬‚·‚é
+  // intåž‹ç”¨ã®TPointã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   TPoint<int> obj1;
 
-  // ƒƒ“ƒo•Ï”‚É’l‚ðÝ’è‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã«å€¤ã‚’è¨­å®šã™ã‚‹
   obj1.x = 123;
   obj1.y = 456;
 
-  // ƒƒ“ƒoŠÖ”‚ðŒÄ‚Ño‚·
+  // ãƒ¡ãƒ³ãƒé–¢æ•°ã‚’å‘¼ã³å‡ºã™
   obj1.showData();
 
-  // doubleŒ^—p‚ÌTPointƒNƒ‰ƒX‚ÌƒIƒuƒWƒFƒNƒg‚ðì¬‚·‚é
+  // doubleåž‹ç”¨ã®TPointã‚¯ãƒ©ã‚¹ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   TPoint<double> obj2(1.23, 3.45);
 
-  // ƒƒ“ƒoŠÖ”‚ðŒÄ‚Ño‚·
+  // ãƒ¡ãƒ³ãƒé–¢æ•°ã‚’å‘¼ã³å‡ºã™
   obj2.showData();
 
   return 0;

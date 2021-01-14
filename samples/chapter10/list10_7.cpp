@@ -3,84 +3,84 @@
 #include <ctime>
 using namespace std;
 
-// ƒvƒŒƒCƒ„[‚ğ•\‚·ƒNƒ‰ƒX‚Ì’è‹`iŠî–{ƒNƒ‰ƒXj
+// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®šç¾©ï¼ˆåŸºæœ¬ã‚¯ãƒ©ã‚¹ï¼‰
 class Player {
 protected:
-  char mark;			// ˜g‚É‘‚«‚Ş‹L†
-  int number;			// ‘I‚ñ‚¾èi1`9j
+  char mark;			// æ ã«æ›¸ãè¾¼ã‚€è¨˜å·
+  int number;			// é¸ã‚“ã æ‰‹ï¼ˆ1ã€œ9ï¼‰
 public:
-  virtual void select() = 0;	// è‚ğ‘I‚Ôiƒˆ‰¼‘zŠÖ”j
-  char getMark();		// ‹L†‚ğ•Ô‚·
-  int getNumber();		// è‚ğ•Ô‚·
-  Player(char mark);		// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  virtual void select() = 0;	// æ‰‹ã‚’é¸ã¶ï¼ˆç´”ç²‹ä»®æƒ³é–¢æ•°ï¼‰
+  char getMark();		// è¨˜å·ã‚’è¿”ã™
+  int getNumber();		// æ‰‹ã‚’è¿”ã™
+  Player(char mark);		// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ƒ†[ƒU[‚ğ•\‚·ƒNƒ‰ƒX‚Ì’è‹`i”h¶ƒNƒ‰ƒXj
+// ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®šç¾©ï¼ˆæ´¾ç”Ÿã‚¯ãƒ©ã‚¹ï¼‰
 class User : public Player {
 public:
-  void select();		// è‚ğ‘I‚Ô
-  User(char mark);		// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  void select();		// æ‰‹ã‚’é¸ã¶
+  User(char mark);		// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ƒRƒ“ƒsƒ…[ƒ^‚ğ•\‚·ƒNƒ‰ƒX‚Ì’è‹`i”h¶ƒNƒ‰ƒXj
+// ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®šç¾©ï¼ˆæ´¾ç”Ÿã‚¯ãƒ©ã‚¹ï¼‰
 class Computer : public Player {
 public:
-  void select();		// è‚ğ‘I‚Ô
-  Computer(char mark);		// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  void select();		// æ‰‹ã‚’é¸ã¶
+  Computer(char mark);		// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ”Õ–Ê‚ğ•\‚·ƒNƒ‰ƒX‚Ì’è‹`
+// ç›¤é¢ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Board {
 private:
-  char cell[3][3];		// 3~3‚Ì˜g
+  char cell[3][3];		// 3Ã—3ã®æ 
 public:
-  void show();			// ”Õ–Ê‚ğ•\¦‚·‚é
-  bool setCell(Player *player);	// ˜g‚É‹L†‚ğ‘‚«‚Ş
-  bool judge(Player *player);	// Ÿ”s‚ğ”»’è‚·‚é
-  Board();			// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  void show();			// ç›¤é¢ã‚’è¡¨ç¤ºã™ã‚‹
+  bool setCell(Player *player);	// æ ã«è¨˜å·ã‚’æ›¸ãè¾¼ã‚€
+  bool judge(Player *player);	// å‹æ•—ã‚’åˆ¤å®šã™ã‚‹
+  Board();			// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ƒvƒŒƒCƒ„[‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•i‹L†‚ğ•Ô‚·j
+// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆè¨˜å·ã‚’è¿”ã™ï¼‰
 char Player::getMark() {
   return mark;
 }
 
-// ƒvƒŒƒCƒ„[‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iè‚ğ•Ô‚·j
+// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆæ‰‹ã‚’è¿”ã™ï¼‰
 int Player::getNumber() {
   return number;
 }
 
-// ƒvƒŒƒCƒ„[‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iƒRƒ“ƒXƒgƒ‰ƒNƒ^j
+// ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼‰
 Player::Player(char mark) {
   this->mark = mark;
 }
 
-// ƒ†[ƒU[‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iè‚ğ‘I‚Ôj
+// ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆæ‰‹ã‚’é¸ã¶ï¼‰
 void User::select() {
   int n;
 
   do {
-    cout << mark << "‚Ìè‚ğ‘I‚ñ‚Å‚­‚¾‚³‚¢ = ";
+    cout << mark << "ã®æ‰‹ã‚’é¸ã‚“ã§ãã ã•ã„ = ";
     cin >> n;
   } while (n < 1 || n > 9);
   number = n;
 }
 
-// ƒ†[ƒU[‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iƒRƒ“ƒXƒgƒ‰ƒNƒ^j
+// ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼‰
 User::User(char mark) : Player(mark) {
 }
 
-// ƒRƒ“ƒsƒ…[ƒ^‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iè‚ğ‘I‚Ôj
+// ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆæ‰‹ã‚’é¸ã¶ï¼‰
 void Computer::select() {
   number = rand() % 9 + 1;
-  cout << mark << "‚Ìè‚ğ‘I‚ñ‚Å‚­‚¾‚³‚¢ = " << number << "\n";
+  cout << mark << "ã®æ‰‹ã‚’é¸ã‚“ã§ãã ã•ã„ = " << number << "\n";
 }
 
-// ƒRƒ“ƒsƒ…[ƒ^‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iƒRƒ“ƒXƒgƒ‰ƒNƒ^j
+// ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼‰
 Computer::Computer(char mark) : Player(mark) {
 }
 
-// ”Õ–Ê‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•i”Õ–Ê‚ğ•\¦‚·‚éj
+// ç›¤é¢ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆç›¤é¢ã‚’è¡¨ç¤ºã™ã‚‹ï¼‰
 void Board::show() {
   cout << "\n";
   for (int v = 0; v < 3; v++) {
@@ -93,27 +93,27 @@ void Board::show() {
   cout << "+-+-+-+\n";
 }
 
-// ”Õ–Ê‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•i˜g‚É‹L†‚ğ‘‚«‚Şj
+// ç›¤é¢ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆæ ã«è¨˜å·ã‚’æ›¸ãè¾¼ã‚€ï¼‰
 bool Board::setCell(Player *player) {
   int number = player->getNumber();
   int v = (number - 1) / 3;
   int h = (number - 1) % 3;
 
   if (cell[v][h] >= '1' && cell[v][h] <= '9') {
-    // ‘‚«‚ß‚½‚çtrue‚ğ•Ô‚·
+    // æ›¸ãè¾¼ã‚ãŸã‚‰trueã‚’è¿”ã™
     cell[v][h] = player->getMark();
     return true;
   }
   else {
-    // ‘‚«‚ß‚È‚¢‚È‚çfalse‚ğ•Ô‚·
-    cout << "‚»‚±‚É‚Í‘‚«‚ß‚Ü‚¹‚ñI\n";
+    // æ›¸ãè¾¼ã‚ãªã„ãªã‚‰falseã‚’è¿”ã™
+    cout << "ãã“ã«ã¯æ›¸ãè¾¼ã‚ã¾ã›ã‚“ï¼\n";
     return false;
   }
 }
 
-// ”Õ–Ê‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iŸ”s‚ğ”»’è‚·‚éj
+// ç›¤é¢ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆå‹æ•—ã‚’åˆ¤å®šã™ã‚‹ï¼‰
 bool Board::judge(Player *player) {
-  // ƒvƒŒƒCƒ„[‚ªŸ‚¿‚È‚çtrue‚ğ•Ô‚·
+  // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒå‹ã¡ãªã‚‰trueã‚’è¿”ã™
   char mark = player->getMark();
   if (cell[0][0] == mark && cell[0][1] == mark && cell[0][2] == mark ||
     cell[1][0] == mark && cell[1][1] == mark && cell[1][2] == mark ||
@@ -123,11 +123,11 @@ bool Board::judge(Player *player) {
     cell[0][2] == mark && cell[1][2] == mark && cell[2][2] == mark ||
     cell[0][0] == mark && cell[1][1] == mark && cell[2][2] == mark ||
     cell[2][0] == mark && cell[1][1] == mark && cell[0][2] == mark) {
-    cout << "\nƒQ[ƒ€I—¹F" << mark << "‚ÌŸ‚¿‚Å‚·I\n";
+    cout << "\nã‚²ãƒ¼ãƒ çµ‚äº†ï¼š" << mark << "ã®å‹ã¡ã§ã™ï¼\n";
     return true;
   }
 
-  // ˆø‚«•ª‚¯‚È‚çtrue‚ğ•Ô‚·
+  // å¼•ãåˆ†ã‘ãªã‚‰trueã‚’è¿”ã™
   bool draw = true;
   for (int v = 0; v < 3 && draw; v++) {
     for (int h = 0; h < 3 && draw; h++) {
@@ -137,15 +137,15 @@ bool Board::judge(Player *player) {
     }
   }
   if (draw) {
-    cout << "\nƒQ[ƒ€I—¹F" << "ˆø‚«•ª‚¯‚Å‚·I\n";
+    cout << "\nã‚²ãƒ¼ãƒ çµ‚äº†ï¼š" << "å¼•ãåˆ†ã‘ã§ã™ï¼\n";
     return true;
   }
 
-  // Ÿ”s‚ªŠm’è‚µ‚Ä‚¢‚È‚¯‚ê‚Îfalse‚ğ•Ô‚·
+  // å‹æ•—ãŒç¢ºå®šã—ã¦ã„ãªã‘ã‚Œã°falseã‚’è¿”ã™
   return false;
 }
 
-// ”Õ–Ê‚ğ•\‚·ƒNƒ‰ƒX‚ÌÀ‘•iƒRƒ“ƒXƒgƒ‰ƒNƒ^j
+// ç›¤é¢ã‚’è¡¨ã™ã‚¯ãƒ©ã‚¹ã®å®Ÿè£…ï¼ˆã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ï¼‰
 Board::Board() {
   for (int v = 0; v < 3; v++) {
     for (int h = 0; h < 3; h++) {
@@ -154,36 +154,36 @@ Board::Board() {
   }
 }
 
-// ƒƒCƒ“ŠÖ”
+// ãƒ¡ã‚¤ãƒ³é–¢æ•°
 int main() {
-  Player *player[2];		// 2l‚ÌƒvƒŒƒCƒ„[iŠî–{ƒNƒ‰ƒX‚Ì”z—ñj
-  User user('o');		// ƒ†[ƒU[i‹L†‚Íoj
-  Computer computer('x');	// ƒRƒ“ƒsƒ…[ƒ^i‹L†‚Íxj
-  player[0] = &computer;	// æè‚ÌƒvƒŒƒCƒ„[iƒRƒ“ƒsƒ…[ƒ^j
-  player[1] = &user;		// Œãè‚ÌƒvƒŒƒCƒ„[iƒ†[ƒU[j
-  Board board;			// ”Õ–Ê
-  int turn = 0;			// ‡”Ôi0‚Æ1‚ÅŒğŒİ‚ÉØ‚è‘Ö‚¦‚éj
+  Player *player[2];		// 2äººã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆåŸºæœ¬ã‚¯ãƒ©ã‚¹ã®é…åˆ—ï¼‰
+  User user('o');		// ãƒ¦ãƒ¼ã‚¶ãƒ¼ï¼ˆè¨˜å·ã¯oï¼‰
+  Computer computer('x');	// ã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ï¼ˆè¨˜å·ã¯xï¼‰
+  player[0] = &computer;	// å…ˆæ‰‹ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆã‚³ãƒ³ãƒ”ãƒ¥ãƒ¼ã‚¿ï¼‰
+  player[1] = &user;		// å¾Œæ‰‹ã®ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ï¼ˆãƒ¦ãƒ¼ã‚¶ãƒ¼ï¼‰
+  Board board;			// ç›¤é¢
+  int turn = 0;			// é †ç•ªï¼ˆ0ã¨1ã§äº¤äº’ã«åˆ‡ã‚Šæ›¿ãˆã‚‹ï¼‰
 
-  // —”‚ğ‰Šú‰»‚·‚é
+  // ä¹±æ•°ã‚’åˆæœŸåŒ–ã™ã‚‹
   srand(time(NULL));
 
-  // Ÿ”s‚ªŒˆ‚Ü‚é‚Ü‚ÅŒJ‚è•Ô‚·
+  // å‹æ•—ãŒæ±ºã¾ã‚‹ã¾ã§ç¹°ã‚Šè¿”ã™
   while (true) {
-    // ”Õ–Ê‚ğ•\¦‚·‚é
+    // ç›¤é¢ã‚’è¡¨ç¤ºã™ã‚‹
     board.show();
 
-    // ƒvƒŒƒCƒ„[‚ªè‚ğ‘I‚Ô
+    // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ãŒæ‰‹ã‚’é¸ã¶
     do {
       player[turn]->select();
     } while (board.setCell(player[turn]) == false);
 
-    // Ÿ”s‚ğ”»’è‚·‚é
+    // å‹æ•—ã‚’åˆ¤å®šã™ã‚‹
     if (board.judge(player[turn])) {
-      // Ÿ”s‚ªŠm’è‚µ‚½‚çƒQ[ƒ€‚ğI—¹‚·‚é
+      // å‹æ•—ãŒç¢ºå®šã—ãŸã‚‰ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†ã™ã‚‹
       break;
     }
 
-    // ƒvƒŒƒCƒ„[‚ğŒğŒİ‚ÉØ‚è‘Ö‚¦‚é
+    // ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼ã‚’äº¤äº’ã«åˆ‡ã‚Šæ›¿ãˆã‚‹
     if (turn == 0) {
       turn = 1;
     }
@@ -192,7 +192,7 @@ int main() {
     }
   }
 
-  // ”Õ–Ê‚ğ•\¦‚·‚é
+  // ç›¤é¢ã‚’è¡¨ç¤ºã™ã‚‹
   board.show();
 
   return 0;

@@ -2,39 +2,39 @@
 #include <cstring>
 using namespace std;
 
-// ƒNƒ‰ƒX‚Ì’è‹`
+// ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Employee {
 public:
-  int number;		// Ğˆõ”Ô†
-  char name[80];	// –¼
-  int salary;		// ‹‹—^
-  void showData();	// ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
+  int number;		// ç¤¾å“¡ç•ªå·
+  char name[80];	// æ°å
+  int salary;		// çµ¦ä¸
+  void showData();	// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
 };
 
-// ƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Employee::showData() {
-  cout << "Ğˆõ”Ô†F" << number << "\n";
-  cout << "–¼F" << name << "\n";
-  cout << "‹‹—^F" << salary << "\n";
+  cout << "ç¤¾å“¡ç•ªå·ï¼š" << number << "\n";
+  cout << "æ°åï¼š" << name << "\n";
+  cout << "çµ¦ä¸ï¼š" << salary << "\n";
 }
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Employee tanaka, someone;
 
-  // ƒƒ“ƒo•Ï”‚É’l‚ğİ’è‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã«å€¤ã‚’è¨­å®šã™ã‚‹
   tanaka.number = 1234;
-  strcpy(tanaka.name, "“c’†ˆê˜Y");
+  strcpy(tanaka.name, "ç”°ä¸­ä¸€éƒ");
   tanaka.salary = 200000;
 
-  // ƒIƒuƒWƒFƒNƒg‚ğ‘ã“ü‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä»£å…¥ã™ã‚‹
   someone = tanaka;
 
-  // ƒƒ“ƒo•Ï”‚Ì’l‚ğ•ÏX‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’å¤‰æ›´ã™ã‚‹
   tanaka.salary = 250000;
 
-  // ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
   tanaka.showData();
   someone.showData();
 

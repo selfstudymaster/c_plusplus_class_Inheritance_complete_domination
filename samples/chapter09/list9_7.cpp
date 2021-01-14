@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// MyClassƒNƒ‰ƒX‚Ì’è‹`
+// MyClassã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class MyClass {
 private:
   int pri_data;
@@ -9,44 +9,44 @@ protected:
   int pro_data;
 public:
   int pub_data;
-  friend void show(MyClass *ptr); // ƒtƒŒƒ“ƒhŠÖ”
-  MyClass();			// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+  friend void show(MyClass *ptr); // ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°
+  MyClass();			// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// ƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 MyClass::MyClass() {
   pri_data = 123;
   pro_data = 456;
   pub_data = 789;
 }
 
-// ƒtƒŒƒ“ƒhŠÖ”‚ÌÀ‘Ì‚Ì’è‹`
+// ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°ã®å®Ÿä½“ã®å®šç¾©
 void show(MyClass *ptr) {
-  // ‚·‚×‚Ä‚Ìƒƒ“ƒo‚ğ—˜—p‚Å‚«‚é
+  // ã™ã¹ã¦ã®ãƒ¡ãƒ³ãƒã‚’åˆ©ç”¨ã§ãã‚‹
   cout << ptr->pri_data << "\n";
   cout << ptr->pro_data << "\n";
   cout << ptr->pub_data << "\n";
 }
 
-// ’Êí‚ÌŠÖ”‚ÌÀ‘Ì‚Ì’è‹`
+// é€šå¸¸ã®é–¢æ•°ã®å®Ÿä½“ã®å®šç¾©
 void disp(MyClass *ptr) {
-  // public:‚Èƒƒ“ƒo‚¾‚¯‚ğ—˜—p‚Å‚«‚é
+  // public:ãªãƒ¡ãƒ³ãƒã ã‘ã‚’åˆ©ç”¨ã§ãã‚‹
   // cout << ptr->pri_data << "\n";
   // cout << ptr->pro_data << "\n";
   cout << ptr->pub_data << "\n";
 }
 
-// ƒNƒ‰ƒX‚ÆŠÖ”‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã¨é–¢æ•°ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   MyClass obj;
 
-  // ƒtƒŒƒ“ƒhŠÖ”‚ğŒÄ‚Ño‚·
-  cout << "ƒtƒŒƒ“ƒhŠÖ”F\n";
+  // ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°ã‚’å‘¼ã³å‡ºã™
+  cout << "ãƒ•ãƒ¬ãƒ³ãƒ‰é–¢æ•°ï¼š\n";
   show(&obj);
 
-  // ’Êí‚ÌŠÖ”‚ğŒÄ‚Ño‚·
-  cout << "’Êí‚ÌŠÖ”F\n";
+  // é€šå¸¸ã®é–¢æ•°ã‚’å‘¼ã³å‡ºã™
+  cout << "é€šå¸¸ã®é–¢æ•°ï¼š\n";
   disp(&obj);
 
   return 0;

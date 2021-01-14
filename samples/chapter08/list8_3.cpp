@@ -2,69 +2,69 @@
 #include <cstring>
 using namespace std;
 
-// CellPhoneƒNƒ‰ƒX‚Ì’è‹`
+// CellPhoneã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class CellPhone {
 public:
-  char number[20];	// “d˜b”Ô†
-  bool smart;		// ƒXƒ}ƒz‚©‚Ç‚¤‚©
-  CellPhone();		// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  ~CellPhone();		// ƒfƒXƒgƒ‰ƒNƒ^
+  char number[20];	// é›»è©±ç•ªå·
+  bool smart;		// ã‚¹ãƒãƒ›ã‹ã©ã†ã‹
+  CellPhone();		// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  ~CellPhone();		// ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// CellPhoneƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// CellPhoneã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 CellPhone::CellPhone() {
-  cout << "CellPhoneƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Ño‚³‚ê‚Ü‚µ‚½I\n";
+  cout << "CellPhoneã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã³å‡ºã•ã‚Œã¾ã—ãŸï¼\n";
 }
 
-// CellPhoneƒNƒ‰ƒX‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// CellPhoneã‚¯ãƒ©ã‚¹ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 CellPhone::~CellPhone() {
-  cout << "CellPhoneƒNƒ‰ƒX‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Ño‚³‚ê‚Ü‚µ‚½I\n";
+  cout << "CellPhoneã‚¯ãƒ©ã‚¹ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã³å‡ºã•ã‚Œã¾ã—ãŸï¼\n";
 }
 
-// EmployeeƒNƒ‰ƒX‚Ì’è‹`
+// Employeeã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Employee {
 public:
-  int number;		// Ğˆõ”Ô†
-  char name[80];	// –¼
-  int salary;		// ‹‹—^
-  CellPhone phone;	// Œg‘Ñ“d˜biƒƒ“ƒoƒIƒuƒWƒFƒNƒgj
-  void showData();	// ƒƒ“ƒo•Ï”‚Ì’l‚ğ•\¦‚·‚é
-  Employee();		// ƒRƒ“ƒXƒgƒ‰ƒNƒ^
-  ~Employee();		// ƒfƒXƒgƒ‰ƒNƒ^
+  int number;		// ç¤¾å“¡ç•ªå·
+  char name[80];	// æ°å
+  int salary;		// çµ¦ä¸
+  CellPhone phone;	// æºå¸¯é›»è©±ï¼ˆãƒ¡ãƒ³ãƒã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆï¼‰
+  void showData();	// ãƒ¡ãƒ³ãƒå¤‰æ•°ã®å€¤ã‚’è¡¨ç¤ºã™ã‚‹
+  Employee();		// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
+  ~Employee();		// ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿
 };
 
-// EmployeeƒNƒ‰ƒX‚Ìƒƒ“ƒoŠÖ”‚ÌÀ‘•
+// Employeeã‚¯ãƒ©ã‚¹ã®ãƒ¡ãƒ³ãƒé–¢æ•°ã®å®Ÿè£…
 void Employee::showData() {
-  cout << "Ğˆõ”Ô†F" << number << "\n";
-  cout << "–¼F" << name << "\n";
-  cout << "‹‹—^F" << salary << "\n";
-  cout << "Œg‘Ñ“d˜b”Ô†F" << phone.number << "\n";
-  cout << "ƒXƒ}ƒz‚©‚Ç‚¤‚©F" << phone.smart << "\n";
+  cout << "ç¤¾å“¡ç•ªå·ï¼š" << number << "\n";
+  cout << "æ°åï¼š" << name << "\n";
+  cout << "çµ¦ä¸ï¼š" << salary << "\n";
+  cout << "æºå¸¯é›»è©±ç•ªå·ï¼š" << phone.number << "\n";
+  cout << "ã‚¹ãƒãƒ›ã‹ã©ã†ã‹ï¼š" << phone.smart << "\n";
 }
 
-// EmployeeƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Employeeã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Employee::Employee() {
-  cout << "EmployeeƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Ño‚³‚ê‚Ü‚µ‚½I\n";
+  cout << "Employeeã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã³å‡ºã•ã‚Œã¾ã—ãŸï¼\n";
 }
 
-// EmployeeƒNƒ‰ƒX‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ÌÀ‘•
+// Employeeã‚¯ãƒ©ã‚¹ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ã®å®Ÿè£…
 Employee::~Employee() {
-  cout << "EmployeeƒNƒ‰ƒX‚ÌƒfƒXƒgƒ‰ƒNƒ^‚ªŒÄ‚Ño‚³‚ê‚Ü‚µ‚½I\n";
+  cout << "Employeeã‚¯ãƒ©ã‚¹ã®ãƒ‡ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãŒå‘¼ã³å‡ºã•ã‚Œã¾ã—ãŸï¼\n";
 }
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Employee tanaka;
 
-  // ƒƒ“ƒo‚ğg‚¤
+  // ãƒ¡ãƒ³ãƒã‚’ä½¿ã†
   tanaka.number = 1234;
-  strcpy(tanaka.name, "“c’†ˆê˜Y");
+  strcpy(tanaka.name, "ç”°ä¸­ä¸€éƒ");
   tanaka.salary = 200000;
   strcpy(tanaka.phone.number, "111-1111-1111");
   tanaka.phone.smart = true;
   tanaka.showData();
 
-  // ‚±‚±‚ÅƒIƒuƒWƒFƒNƒg‚ª”jŠü‚³‚ê‚é
+  // ã“ã“ã§ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒç ´æ£„ã•ã‚Œã‚‹
   return 0;
 }

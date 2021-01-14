@@ -2,67 +2,67 @@
 #include <cmath>
 using namespace std;
 
-// ƒNƒ‰ƒX‚Ì’è‹`
+// ã‚¯ãƒ©ã‚¹ã®å®šç¾©
 class Point {
 public:
-  int x;		// xÀ•W
-  int y;		// yÀ•W
-  bool operator==(Point obj); // ==‰‰Zq‚ÌƒI[ƒo[ƒ[ƒh
-  bool operator>(Point obj); // >‰‰Zq‚ÌƒI[ƒo[ƒ[ƒh
+  int x;		// xåº§æ¨™
+  int y;		// yåº§æ¨™
+  bool operator==(Point obj); // ==æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰
+  bool operator>(Point obj); // >æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰
 };
 
-// ==‰‰Zq‚ÌƒI[ƒo[ƒ[ƒh‚ÌÀ‘•
+// ==æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã®å®Ÿè£…
 bool Point::operator==(Point obj) {
   if ((this->x == obj.x) && (this->y == obj.y)) {
-    // ‘Î‰‚·‚éƒƒ“ƒo‚ª“™‚µ‚¯‚ê‚Îtrue‚ğ•Ô‚·
+    // å¯¾å¿œã™ã‚‹ãƒ¡ãƒ³ãƒãŒç­‰ã—ã‘ã‚Œã°trueã‚’è¿”ã™
     return true;
   }
   else {
-    // ‚»‚¤‚Å‚È‚¯‚ê‚Îfalse‚ğ•Ô‚·
+    // ãã†ã§ãªã‘ã‚Œã°falseã‚’è¿”ã™
     return false;
   }
 }
 
-// >‰‰Zq‚ÌƒI[ƒo[ƒ[ƒh‚ÌÀ‘•
+// >æ¼”ç®—å­ã®ã‚ªãƒ¼ãƒãƒ¼ãƒ­ãƒ¼ãƒ‰ã®å®Ÿè£…
 bool Point::operator>(Point obj) {
-  // ƒxƒNƒgƒ‹‚Ì’·‚³‚ğ‹‚ß‚é
+  // ãƒ™ã‚¯ãƒˆãƒ«ã®é•·ã•ã‚’æ±‚ã‚ã‚‹
   double v1, v2;
   v1 = sqrt(this->x * this->x + this->y * this->y);
   v2 = sqrt(obj.x * obj.x + obj.y * obj.y);
   if (v1 > v2) {
-    // ƒxƒNƒgƒ‹‚Ì’·‚³‚ª‘å‚«‚¯‚ê‚Îtrue‚ğ•Ô‚·
+    // ãƒ™ã‚¯ãƒˆãƒ«ã®é•·ã•ãŒå¤§ãã‘ã‚Œã°trueã‚’è¿”ã™
     return true;
   }
   else {
-    // ‚»‚¤‚Å‚È‚¯‚ê‚Îfalse‚ğ•Ô‚·
+    // ãã†ã§ãªã‘ã‚Œã°falseã‚’è¿”ã™
     return false;
   }
 }
 
-// ƒNƒ‰ƒX‚ğg‚¤‘¤‚ÌƒR[ƒh
+// ã‚¯ãƒ©ã‚¹ã‚’ä½¿ã†å´ã®ã‚³ãƒ¼ãƒ‰
 int main() {
-  // ƒIƒuƒWƒFƒNƒg‚ğì¬‚·‚é
+  // ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’ä½œæˆã™ã‚‹
   Point a, b;
 
-  // ƒƒ“ƒo•Ï”‚ğİ’è‚·‚é
+  // ãƒ¡ãƒ³ãƒå¤‰æ•°ã‚’è¨­å®šã™ã‚‹
   a.x = 1;
   a.y = 2;
   b.x = 3;
   b.y = 4;
 
-  // “™‚µ‚¢‚©‚Ç‚¤‚©”»’f‚·‚é
+  // ç­‰ã—ã„ã‹ã©ã†ã‹åˆ¤æ–­ã™ã‚‹
   if (a == b) {
-    cout << "a‚Æb‚Í“™‚µ‚¢I\n";
+    cout << "aã¨bã¯ç­‰ã—ã„ï¼\n";
   }
   else {
-    cout << "a‚Æb‚Í“™‚µ‚­‚È‚¢I\n";
+    cout << "aã¨bã¯ç­‰ã—ããªã„ï¼\n";
   }
-  // ‘å‚«‚¢‚©‚Ç‚¤‚©”»’f‚·‚é
+  // å¤§ãã„ã‹ã©ã†ã‹åˆ¤æ–­ã™ã‚‹
   if (a > b) {
-    cout << "a‚Íb‚æ‚è‘å‚«‚¢I\n";
+    cout << "aã¯bã‚ˆã‚Šå¤§ãã„ï¼\n";
   }
   else {
-    cout << "a‚Íb‚æ‚è‘å‚«‚­‚È‚¢I\n";
+    cout << "aã¯bã‚ˆã‚Šå¤§ãããªã„ï¼\n";
   }
 
   return 0;
