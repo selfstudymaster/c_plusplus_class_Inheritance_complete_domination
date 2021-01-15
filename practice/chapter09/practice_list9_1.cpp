@@ -45,6 +45,7 @@ int main() {
     // Employeeクラスのローカルオブジェクトが自動的に作成され、
     // それがshow()の引数 objとなる(tanakaの3つのメンバ変数の値がコピーされる)
     show(tanaka); 
+    // show() を抜ける時に objは自動的に破棄される
     cout << "show()を抜けました！\n";
 
     return 0;
