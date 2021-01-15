@@ -27,6 +27,7 @@ Employee::~Employee() {
 }
 
 // 関数のプロトタイプ宣言
+// show()の引数に Employee obj を指定する点に注目
 void show(Employee obj);
 
 // クラスを使う側のコード
@@ -41,7 +42,9 @@ int main() {
 
     // オブジェクトを引数に渡して関数を呼び出す
     cout << "show()を呼び出します！\n";
-    show(tanaka);
+    // Employeeクラスのローカルオブジェクトが自動的に作成され、
+    // それがshow()の引数 objとなる(tanakaの3つのメンバ変数の値がコピーされる)
+    show(tanaka); 
     cout << "show()を抜けました！\n";
 
     return 0;
