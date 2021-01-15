@@ -7,7 +7,7 @@ class CellPhone {
     public:
         char number[20];
         bool smart;
-        CellPhone();
+        CellPhone(); // 引数のないコンストラクタ Employeeクラスのオブジェクトが作成される前に自動的に呼び出されるのでメンバイニシャライザを使う必要はない
         CellPhone(const char *b, bool i);
         ~CellPhone();
 };
@@ -35,7 +35,7 @@ class Employee {
         int number;
         char name[80];
         int salary;
-        CellPhone phone; // メンバコンストラクタ
+        CellPhone phone; // メンバオブジェクト
         void showData();
         Employee();
         Employee(int nu, const char *na, int sa, const char *cn, bool cs);
