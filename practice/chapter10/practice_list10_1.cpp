@@ -33,10 +33,12 @@ Employee &Employee::operator=(Employee &obj) {
     this->number = obj.number;
     this->salary = obj.salary;
 
-    // ポインタが指すメモリ領域をコピーする
+    // ポインタが指すメモリ領域(にあるデータ)をコピーする
+    // this.name = obj.name; とするとポインタが指すアドレス自体がコピーされるので注意
     strcpy(this->name, obj.name);
 
     // 代入されたオブジェクト自体を返す
+    // thisポインタに* をつけるとオブジェクトの実体を表すものとなる
     return *this;
 }
 
@@ -64,4 +66,4 @@ int main() {
     cout << "tanaka:" << tanaka.name << "\n";
 
     return 0;
-}
+}   
