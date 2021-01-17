@@ -1,4 +1,5 @@
 // テンプレートクラス
+// アルゴリズムが同じで扱うデータ型(例えば int とdouble )だけが異なるクラスを2つ作成するのは非効率な場合等に用いる
 #include <iostream>
 using namespace std;
 
