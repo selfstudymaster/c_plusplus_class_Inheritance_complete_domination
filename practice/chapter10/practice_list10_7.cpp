@@ -6,7 +6,7 @@ using namespace std;
 
 // プレイヤーを表すクラスの定義(基本クラス)
 class Player {
-    protected:
+    protected: // プロテクテッドにして派生クラスのUserクラスとComputerクラスのselect()関数でmarkとnumberを利用する
         char mark; // 枠に書き込む記号
         int number; // 選んだ手(1~9)
     public:
@@ -74,7 +74,7 @@ User::User(char mark) : Player(mark) {
 
 // コンピュータを表すクラスの実装(手を選ぶ)
 void Computer::select() {
-    number = rand() % 9 + 1;
+    number = rand() % 9 + 1; // 乱数で選ぶ
     cout << mark << "の手を選んでください = " << number << "\n";
 }
 
